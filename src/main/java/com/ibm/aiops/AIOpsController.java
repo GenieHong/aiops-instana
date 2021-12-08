@@ -22,6 +22,10 @@ public class AIOpsController {
 	@Value("${kafka-topic.aiops-tpd}")
 	private String eventMessageTopic;
 
+    @GetMapping("/")
+    public String hello() {
+        return "Hello AIOps!!";
+    }
 
     @GetMapping("/messages")
     public String sendMessage() {
